@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/students")
 public class StudentController {
     @GetMapping
-    public ResponseEntity<String> getStudentData(@RequestParam String name, @RequestParam String course, @RequestParam Long phone) {
-        System.out.println("Name: " + name + ", Course: " + course + ", Phone: " + phone);
+    public ResponseEntity<String> getStudentData(@RequestParam String name, @RequestParam String course,@RequestParam int duration, @RequestParam Long phone) {
+        System.out.println("Name: " + name + ", Course: " + course + ", Duration: "+ duration + "Month"+ ", Phone: " + phone);
         return new ResponseEntity<>("Get student details!", HttpStatusCode.valueOf(200));
     }
 
